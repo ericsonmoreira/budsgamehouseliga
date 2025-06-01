@@ -1,3 +1,4 @@
+/* Importa a fonte Roboto do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
@@ -9,15 +10,15 @@ body {
   line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   background-color: #222;
   color: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 30px;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .logo {
@@ -25,21 +26,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* Oculta o checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Ícone do menu hambúrguer */
-.menu-icon {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  user-select: none;
-  color: white;
-}
-
-/* Navegação padrão */
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -58,45 +45,38 @@ body {
   text-decoration: underline;
 }
 
-/* Conteúdo principal */
+/* Main Content */
 main {
   max-width: 800px;
   margin: 2em auto;
   padding: 0 20px;
 }
 
+/* Horizontal rule */
 hr {
   margin: 2em 0;
   border: none;
   border-top: 1px solid #ccc;
 }
 
-/* =========== RESPONSIVO =========== */
+/* Responsividade para telas pequenas */
 @media (max-width: 600px) {
-  .menu-icon {
-    display: block;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
   }
 
   .nav-links {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    display: none;
     margin-top: 10px;
-  }
-
-  /* Mostrar o menu quando o checkbox está marcado */
-  .menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
-  }
-
-  .navbar {
-    align-items: flex-start;
-    padding: 10px 20px;
   }
 
   .nav-links li a {
     display: block;
+    width: 100%;
     padding: 8px 0;
   }
 
